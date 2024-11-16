@@ -10,13 +10,14 @@ use Shopware\Core\Framework\Plugin\Context\UninstallContext;
 
 class FroshPlatformMailArchive extends Plugin
 {
-    public function uninstall(UninstallContext $uninstallContext): void {
+    public function uninstall(UninstallContext $uninstallContext): void
+    {
         if ($uninstallContext->keepUserData()) {
             return;
         }
 
         $container = $this->container;
-        if($container === null){
+        if ($container === null) {
             return;
         }
 
